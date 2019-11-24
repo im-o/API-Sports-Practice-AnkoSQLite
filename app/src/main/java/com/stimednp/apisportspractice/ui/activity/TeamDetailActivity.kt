@@ -91,7 +91,7 @@ class TeamDetailActivity : AppCompatActivity(), ITeamDetailView {
             }
             swipeRefresh.snackbar("Added to favorites").show()
         } catch (er: SQLiteConstraintException) {
-            swipeRefresh.snackbar(er.localizedMessage).show()
+            swipeRefresh.snackbar(er.message!!).show()
         }
     }
 
