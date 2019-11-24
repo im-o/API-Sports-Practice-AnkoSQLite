@@ -88,11 +88,11 @@ class TeamsFragment : Fragment(), AnkoComponent<Context>, TeamsView {
             linearLayout() {
                 lparams(matchParent, wrapContent)
                 orientation = LinearLayout.VERTICAL
-                padding = dip(16)
 
                 spinner = spinner() {
                     id = R.id.spinner
-                }
+                }.lparams(matchParent, dip(50))
+
                 swipeRefreshLayout = swipeRefreshLayout {
                     setColorSchemeResources(
                         R.color.colorAccent,
